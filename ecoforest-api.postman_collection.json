@@ -1,0 +1,1117 @@
+{
+	"info": {
+		"_postman_id": "cb9b310c-e589-4a75-8560-a36289c9a69c",
+		"name": "Ecoforest",
+		"description": "Collection of API calls to connect to an Ecoforest heater",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Offsets",
+			"item": [
+				{
+					"name": "Set Extractor Delta Percentage Extractor Start",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1051&&delta_porcentaje_extractor=0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Extractor Delta Depresion Start",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1052&delta_depresion=0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Extractor Delta Pellets Time On Start",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1053&delta_Ton_pellets=0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Extractor Delta Pellets Time Off Start",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\"idOperacion=1055&delta_Toff_pellets=0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Max Power Start",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1097&nivelmax_onoff=1"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Extractor Delta Convector Start",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1054&delta_convector=0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Extractor Delta Percentage Extractor Nominal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1533&delta_porcentaje_extractor_i=0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Extractor Delta Depresion Nominal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1534&delta_depresion_i=0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Extractor Delta Pellets Time On Nominal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1535&delta_Ton_pellets_i=0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Extractor Delta Pellets Time Off Nominal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1537&delta_Toff_pellets_i==0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Extractor Delta Convector Nominal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1536&delta_convector_i=0.0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				}
+			],
+			"description": "Configuration of the offsets\n",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Networking",
+			"item": [
+				{
+					"name": "Get Wlan IP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1238"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Eth IP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1234"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Various",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1246"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Ethernet Connection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1252&SET_OPERACION=7"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Client Mode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1245&modo_cliente=1"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Access Point Mode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1244&S_modo_AP=0"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Test Connection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1251"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Networking Mode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1243"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1237"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1242&passw=Password"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get SSID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1236"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set SSID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1241&ssid=Ecoforest"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Check First Execution",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1252&SET_OPERACION=1"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Supervisor Mode",
+			"item": [
+				{
+					"name": "Get Versions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1045"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Supervisor Mode Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1041"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Supervisor Mode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1021&modo_supervisor=1"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Test Hardware",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1092"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Test Extractor Percentage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1030&porcentaje_extractor=50"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Test Convector Percentage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1032&porcentaje_convector=50"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Test Resistor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1035&resist_encendido=1"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Control Mode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1070"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Test Pellet Feeder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "idOperacion=1036&alim_pellets=1"
+						},
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						},
+						"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get Operation Mode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1071"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "Obtains the operation mode of the heater, it can be:\n\n- Power = 0\n- Temperatura = 1\n- Emergencia = 2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Refresh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1002"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "Obtains the operation mode of the heater, it can be:\n\n- Power = 0\n- Temperatura = 1\n- Emergencia = 2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Alarm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1079"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "Obtains the operation mode of the heater, it can be:\n\n- Power = 0\n- Temperatura = 1\n- Emergencia = 2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Max Power",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1096"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Time",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1095&int_rx=1575827788"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "Obtains the operation mode of the heater, it can be:\n\n- Power = 0\n- Temperatura = 1\n- Emergencia = 2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Time",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1094"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "Obtains the operation mode of the heater, it can be:\n\n- Power = 0\n- Temperatura = 1\n- Emergencia = 2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Language",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1090"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "Obtain the language of the UI"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Potencia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1004&potencia=2"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "Obtain the language of the UI"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Temperature",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1019&temperatura=2"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "Obtain the language of the UI"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Functioning",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1153"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Mode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1071"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Boilter Type",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1102"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Heater",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1100"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Calendar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1066&1"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Calendar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1065"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Heater Off",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1013&on_off=0"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Heater On",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1013&on_off=1"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Functioning Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1020"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Check Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1072&user=tecnico&password=tecnicopassw"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Mode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "idOperacion=1081&modo_operacion=0"
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				},
+				"description": "function showfunct(){\r\n\r\nif((tipoCal==1||tipoCal==5||tipoCal==13)&&(modo_func==0)){ //emergencia?\r\n\t\t\t\t\t\tdocument.getElementById('cons').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif((tipoCal==21||tipoCal==29||tipoCal==53||tipoCal==61||tipoCal==17||tipoCal==49||tipoCal==3||tipoCal==7||tipoCal==15)&&(modo_func==1)){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='none';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='inline';\r\n\t\t\t\t\t\t}\r\nif(tipoCal==5||tipoCal==7||tipoCal==15||tipoCal==13||tipoCal==21||tipoCal==29||tipoCal==61||tipoCal==53){\r\n\tvar cadena = \"idOperacion=1153\";\r\n\t$.ajax({\r\n\t\ttype: \"POST\",\r\n\t\turl: \"../../recepcion_datos_4.cgi\",\r\n\t\tdata: cadena,\r\n\t\tasync: false,\r\n\t}).done(function( data ) {\r\n\t\tvar datos=data.split(\"\\n\");\r\n\t\tvar datos_correctos = eliminarErrores(datos);\r\n\t\tseason=datos_correctos[0].replace(\"CONTROL_CLIMA_INVIERNO=\" , \"\");\r\n\t\t   if(season==1){document.getElementById('season_icon').style.backgroundImage = \"url(../images/summer_season.png)\";\r\n\t\t\t\tif((tipoCal==5||tipoCal==13)&&modo_func==1){ \r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv').style.display='inline';\r\n\t\t\t\t\t\tdocument.getElementById('consignaDiv-').style.display='none';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t   else if(season==0){document.getElementById('season_icon').style.backgroundImage = \"url(../images/winter_season.png)\";}\r\n\t\t   else if(season==2){document.getElementById('season_icon').style.backgroundImage = \"url(../images/solo_cal.png)\";}\r\n\t})\r\n\t.fail(function() {\r\n\t\tsetTimeout(\"showfunct()\",1101);\r\n\t});\r\n}\r\n}\t"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2fe6d13e-faf9-4328-92f6-1baecb643aeb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d99e4398-14b9-4f56-a593-9fc35244d4c3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "5eed5415-700d-4fd3-9264-e910997fc63d",
+			"key": "host",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
